@@ -11,3 +11,27 @@
 .MuiCheckbox-colorPrimary.Mui-checked{
     color: $base-color !important;
 }
+.widget-tabs{
+    .MuiFormLabel-root{
+        font-size: 12px;
+        font-weight: normal;
+        font-family: $baseFont-700;
+        &.Mui-focused{
+            color: $base-color;
+        }
+    }
+    .MuiInput-underline{
+        &:after{
+            border-bottom-color: $base-color;
+        }
+    }
+    .MuiInputBase-root{
+        font-size: 12px;
+    }
+    .MuiFormControlLabel-label{
+        color: #000;
+    }
+    .MuiFab-primary{
+        background-color: $base-color;
+    }
+}

@@ -66,6 +66,7 @@ const AddWidget = (props) => {
         open={open}
         anchorEl={anchorRef.current}
         role={undefined}
+        style={{ zIndex: '2000' }}
         transition
         disablePortal
       >
@@ -84,6 +85,7 @@ const AddWidget = (props) => {
                     <MenuItem
                       key={index}
                       onClick={(event) => handleMenuItemClick(event, index)}
+                      style={{zIndex:2000}}
                     >
                       {option}
                     </MenuItem>

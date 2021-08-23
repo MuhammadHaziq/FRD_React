@@ -43,7 +43,7 @@ function TradeTickets(props) {
 
   return (
     <React.Fragment>
-      <div className="widget-main">
+      <div className="widget-main trade-tickets-main">
         <div className="widget-head">
           <span className="title"> Trade Tickets </span>
           <div className="widget-controls">
@@ -59,35 +59,37 @@ function TradeTickets(props) {
           justifyContent="flex-start"
           alignItems="flex-start"
         >
-          <Grid item xs={8}>
+          <Grid item xs={12}>
             <div className="widget-body">
-              <TradeTicketForm
-                handleChange={handleChange}
-                handleChangeAutoComplete={handleChangeAutoComplete}
-                state={state}
-                handleOnCheck={handleOnCheck}
-              />
-              <Grid
-                container
-                direction="row"
-                justifyContent="center"
-                alignItems="center"
-              >
-                <Grid item xs={6}>
-                  <Button variant="contained" color="primary">
-                    Buy
-                  </Button>
-                  <Button variant="contained" color="primary">
-                    Sell
-                  </Button>
-                  <Button variant="contained" color="primary">
-                    Sell Short
-                  </Button>
-                  <Button variant="contained" color="primary">
-                    Buy To Cover
-                  </Button>
+              <div className="trade-ticket-form">
+                <TradeTicketForm
+                  handleChange={handleChange}
+                  handleChangeAutoComplete={handleChangeAutoComplete}
+                  state={state}
+                  handleOnCheck={handleOnCheck}
+                />
+                <Grid
+                  container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Grid item xs={12}>
+                    <Button variant="contained" color="primary">
+                      Buy
+                    </Button>
+                    <Button variant="contained" color="primary">
+                      Sell
+                    </Button>
+                    <Button variant="contained" color="primary">
+                      Sell Short
+                    </Button>
+                    <Button variant="contained" color="primary">
+                      Buy To Cover
+                    </Button>
+                  </Grid>
                 </Grid>
-              </Grid>
+              </div>
               <Grid
                 container
                 direction="row"

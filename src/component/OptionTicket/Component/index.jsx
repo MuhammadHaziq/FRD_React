@@ -191,15 +191,17 @@ function OptionTickets(props) {
               removeRow={removeRow}
             />
           </Grid>
-          <Grid container>
-            <OptionTicketFooter
-              handleChange={handleChangeFooter}
-              state={footerState}
-              stockSymbol={state.stockSymbol}
-              handleOnCheck={handleOnCheck}
-              handleChangeAutoCompleteFooter={handleChangeAutoCompleteFooter}
-            />
-          </Grid>
+          <div className="open-tickets-footer-form">
+              <Grid container>
+                <OptionTicketFooter
+                  handleChange={handleChangeFooter}
+                  state={footerState}
+                  stockSymbol={state.stockSymbol}
+                  handleOnCheck={handleOnCheck}
+                  handleChangeAutoCompleteFooter={handleChangeAutoCompleteFooter}
+                />
+              </Grid>
+          </div>
         </div>
       </div>
     </React.Fragment>

@@ -43,7 +43,12 @@
 
 // 6. Page-specific styles
 @import 'pages/home',
-        'pages/inner-pages';
+        'pages/inner-pages',
+        'pages/trade-ticket',
+        'pages/price-alert',
+        'pages/positions',
+        'pages/open-tickets',
+        'pages/security-info';
 
 // Importing helpers right at the end.
 @import 'base/helpers';

@@ -4,16 +4,19 @@
 	box-shadow: 0px 20px 60px rgba(38, 47, 86, 0.04);
 	position: relative;
 	z-index: 1000;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
     &:after{
     	content:"";
     	clear: both;
     	display: block;
     }
     .header-col{
-    	float: left;
+    	// float: left;
     	border-left: #e4e4e4 solid 1px;
     	padding: 10px;
-    	min-height: 62px;
+		flex: 1;
     	&:first-child{
     		border-left: none;
     	}
@@ -33,6 +36,7 @@
     	}
     	&.server-status{
     		white-space: nowrap;
+			flex: 2;
     		.server-status-list{
     			display: inline-block;
     			vertical-align: middle;
@@ -76,15 +80,16 @@
     		}
     	}
     	&.header-clock{
-    		float: right;
+    		// float: right;
     	}
     	&.header-instrument{
-    		float: right;
+    		// float: right;
 			color: #228b22;
 			line-height: 13.2px;
     	}
     	&.header-account-info{
-    		float: right;
+    		// float: right;
+			flex: 2;
 			&:after{
 				content: "";
 				display: block;
@@ -127,7 +132,8 @@
 			}
     	}
 		&.settings{
-			float: right;
+			// float: right;
+			text-align: right;
 			.MuiButtonGroup-contained{
 				display: block;
 				box-shadow: none;

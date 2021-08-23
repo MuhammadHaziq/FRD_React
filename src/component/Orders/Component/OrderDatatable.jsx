@@ -155,7 +155,7 @@ const OrderDatatable = (props) => {
           container
           direction="row"
           justifyContent="flex-start"
-          alignItems="flex-start"
+          alignItems="center"
           spacing={2}
         >
           <OrderForm />

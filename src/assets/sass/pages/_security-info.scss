@@ -1,0 +1,20 @@
+.security-info-main{
+    padding: 20px;
+    .MuiListItem-container{
+
+        &:nth-child(even){
+            background-color: #F5F7FA;
+        }
+        .MuiTypography-displayBlock{
+            font-size: 12px;
+            font-family: $baseFont-500;
+            color: #000;
+        }
+        .MuiButtonBase-root{
+            padding: 0;
+            margin: 0;
+            font-family: $baseFont-700;
+            font-size: 12px;
+        }
+    }
+}

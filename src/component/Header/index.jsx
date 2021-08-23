@@ -21,9 +21,11 @@ const Header = () => {
         <ServerStatus />
         <Link className="real-time-link"> Get RealTime Data </Link>
       </div>
-      <div className="header-col settings">
-        <ProfileMenu />
-        <SettingMenu />
+      <div className="header-col header-clock">
+        <Clock />
+      </div>
+      <div className="header-col header-instrument">
+        <Instrument />
       </div>
       <div className="header-col header-account-info">
         <div className="account">
@@ -35,11 +37,10 @@ const Header = () => {
           <AccountInfo />
         </div>
       </div>
-      <div className="header-col header-instrument">
-        <Instrument />
-      </div>
-      <div className="header-col header-clock">
-        <Clock />
+      
+      <div className="header-col settings">
+        <ProfileMenu />
+        <SettingMenu />
       </div>
     </header>
   );

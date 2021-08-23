@@ -5,10 +5,11 @@ function NumberInput(props) {
   return (
     <TextField
       id="standard-number"
-      label="Number"
+      label={props.label}
       type="number"
       value={props.value}
       onChange={props.handleChange}
+      inputProps={props.inputProps}
       name={props.name}
       disabled={props.disable}
     />

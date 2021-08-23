@@ -192,7 +192,7 @@ function PositionDatatable(props) {
     });
   }
   return (
-    <div className="widget-main">
+    <div className="widget-main positions-main">
       <div className="widget-head">
         <span className="title"> Positions </span>
         <div className="widget-controls">
@@ -203,31 +203,33 @@ function PositionDatatable(props) {
         </div>
       </div>
       <div className="widget-body">
-        <Grid
-          container
-          direction="row"
-          justifyContent="space-between"
-          alignItems="flex-start"
-          spacing={2}
-        >
-          <Grid item xs={2}>
-            <FormControl variant="standard" className={classes.formControl}>
-              <AutoCompleteInput
-                label={"Symbol"}
-                variant="standard"
-                name="stockSymbol"
-                value={state.stockSymbol}
-                handleChangeAutoComplete={handleChangeAutoComplete}
-              />
-            </FormControl>
+        <div className="positions-form">
+          <Grid
+            container
+            direction="row"
+            justifyContent="space-between"
+            alignItems="flex-start"
+            spacing={2}
+          >
+            <Grid item xs={2}>
+              <FormControl variant="standard" className={classes.formControl}>
+                <AutoCompleteInput
+                  label={"Symbol"}
+                  variant="standard"
+                  name="stockSymbol"
+                  value={state.stockSymbol}
+                  handleChangeAutoComplete={handleChangeAutoComplete}
+                />
+              </FormControl>
+            </Grid>
+            <Grid item xs={10}>
+              <Typography className={classes.typo}>
+                Realized Daily P/L: 0.00 (0.00%) P/L Open: -13,353.00 (-23.01%)
+                Market Value: 44,667.00
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid item xs={10}>
-            <Typography className={classes.typo}>
-              Realized Daily P/L: 0.00 (0.00%) P/L Open: -13,353.00 (-23.01%)
-              Market Value: 44,667.00
-            </Typography>
-          </Grid>
-        </Grid>
+        </div>
         <DataTable columns={columns} data={data} />
       </div>
     </div>

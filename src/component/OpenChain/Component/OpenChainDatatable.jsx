@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import DataTable from "react-data-table-component";
 import SettingsIcon from "@material-ui/icons/Settings";
 import PresentToAllIcon from "@material-ui/icons/PresentToAll";
 import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 import CloseIcon from "@material-ui/icons/Close";
 import OpenChainForm from "./OpenChainForm";
+
 const data = [
   {
     id: 1,
@@ -137,21 +138,30 @@ const columns = [
 ];
 
 const OpenChainDatatable = (props) => {
+  const [modelOpen, setModelOpen] = useState(true);
   return (
-    <div className="widget-main">
-      <div className="widget-head">
-        <span className="title"> Open Chain </span>
-        <div className="widget-controls">
-          <PresentToAllIcon />
-          <SettingsIcon />
-          <CheckBoxOutlineBlankIcon />
-          <CloseIcon />
+    <div>
+      {modelOpen == true && (
+        <div className="widget-main">
+          <div className="widget-head">
+            <span className="title"> Open Chain </span>
+            <div className="widget-controls">
+              <PresentToAllIcon />
+              <SettingsIcon />
+              <CheckBoxOutlineBlankIcon />
+              <CloseIcon
+                onClick={() => {
+                  setModelOpen(false);
+                }}
+              />
+            </div>
+          </div>
+          <div className="widget-body">
+            <OpenChainForm />
+            <DataTable columns={columns} data={data} />
+          </div>
         </div>
-      </div>
-      <div className="widget-body">
-        <OpenChainForm />
-        <DataTable columns={columns} data={data} />
-      </div>
+      )}
     </div>
   );
 };

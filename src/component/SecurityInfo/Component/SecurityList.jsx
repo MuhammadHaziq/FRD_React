@@ -97,9 +97,9 @@ function SecurityInfo(props) {
           direction="row"
           justifyContent="space-between"
           alignItems="flex-start"
-          spacing={2}
+          spacing={3}
         >
-          <Grid item xs={2}>
+          <Grid item xs={2} spacing={3}>
             <FormControl variant="standard" className={classes.formControl}>
               <AutoCompleteInput
                 label={"Symbol"}

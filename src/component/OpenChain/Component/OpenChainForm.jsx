@@ -10,6 +10,7 @@ import {
   expiration,
 } from "../../../Constants/Constants";
 import SymbolTable from "./SymbolTable";
+
 const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
@@ -138,6 +139,7 @@ const OpenChainForm = (props) => {
           className={classes.symbolTable}
         >
           <SymbolTable
+            stockSymbol={state.stockSymbol}
             data={data}
             stockTrade={state.stockTrade}
             quantity={state.quantity}

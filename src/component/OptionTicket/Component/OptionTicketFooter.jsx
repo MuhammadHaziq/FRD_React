@@ -29,7 +29,7 @@ const OptionTicketFooter = (props) => {
         alignItems="flex-start"
         spacing={2}
       >
-        <Grid item xs={2}>
+        <Grid item xs={2} spacing={2}>
           <FormControl variant="standard" className={classes.formControl}>
             <SelectInput
               label={"Order Type"}
@@ -41,7 +41,7 @@ const OptionTicketFooter = (props) => {
             />
           </FormControl>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={2} spacing={2}>
           <FormControl variant="standard" className={classes.formControl}>
             <Input
               label={"Comment"}
@@ -62,7 +62,7 @@ const OptionTicketFooter = (props) => {
         alignItems="flex-start"
         spacing={2}
       >
-        <Grid item xs={2}>
+        <Grid item xs={2} spacing={2}>
           <FormControl variant="standard" className={classes.formControl}>
             <SelectInput
               label={"Duration"}
@@ -74,7 +74,7 @@ const OptionTicketFooter = (props) => {
             />
           </FormControl>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={2} spacing={2}>
           <FormControl variant="standard" className={classes.formControl}>
             <CheckBoxInput
               label={"All or none"}
@@ -93,7 +93,7 @@ const OptionTicketFooter = (props) => {
           alignItems="flex-start"
           spacing={2}
         >
-          <Grid item xs={2}>
+          <Grid item xs={2} spacing={2}>
             <FormControl variant="standard" className={classes.formControl}>
               <CheckBoxInput
                 label={"Placement Condition"}

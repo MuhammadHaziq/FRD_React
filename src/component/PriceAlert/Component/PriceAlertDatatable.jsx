@@ -150,7 +150,7 @@ function PriceAlertDatatable(props) {
   }
   return (
     <React.Fragment>
-      <div className="widget-main">
+      <div className="widget-main price-alert-main">
         <div className="widget-head">
           <span className="title"> Price Alert </span>
           <div className="widget-controls">

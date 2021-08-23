@@ -28,41 +28,43 @@ export default function SecurityLists(props) {
   const [secondary] = useState(false);
 
   return (
-    <Grid container direction="column" justifyContent="flex-start">
-      <Grid item xs={12} md={6}>
-        <Typography variant="h6" className={classes.title}>
-          Information
-        </Typography>
-        <div className={classes.demo}>
-          <List dense={dense}>
-            {(props.data || []).map((item, index) => (
-              <ListItem>
-                <ListItemText
-                  primary={item.label}
-                  secondary={secondary ? "Secondary text" : null}
-                />
-                <ListItemSecondaryAction>
-                  <IconButton edge="end" aria-label="delete">
-                    {item.value}
-                  </IconButton>
-                </ListItemSecondaryAction>
-              </ListItem>
-            ))}
-          </List>
-        </div>
-      </Grid>
-      <Grid item xs={12} md={4}>
-        <Grid
-          container
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Button variant="contained" color="primary">
-            Trade
-          </Button>
+    <div className="security-info-main">
+        <Grid container direction="column" justifyContent="flex-start">
+          <Grid item xs={12} md={6} spacing={3}>
+            <Typography variant="h6" className={classes.title}>
+              Information
+            </Typography>
+            <div className={classes.demo}>
+              <List dense={dense}>
+                {(props.data || []).map((item, index) => (
+                  <ListItem>
+                    <ListItemText
+                      primary={item.label}
+                      secondary={secondary ? "Secondary text" : null}
+                    />
+                    <ListItemSecondaryAction>
+                      <IconButton edge="end" aria-label="delete">
+                        {item.value}
+                      </IconButton>
+                    </ListItemSecondaryAction>
+                  </ListItem>
+                ))}
+              </List>
+            </div>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Grid
+              container
+              direction="column"
+              justifyContent="center"
+              alignItems="flex-end"
+            >
+              <Button variant="contained" color="primary">
+                Trade
+              </Button>
+            </Grid>
+          </Grid>
         </Grid>
-      </Grid>
-    </Grid>
+    </div>
   );
 }

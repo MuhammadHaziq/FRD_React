@@ -25,9 +25,9 @@ function OptionTicketForm(props) {
       <Grid
         container
         direction="row"
-        justifyContent="space-between"
+        // justifyContent="space-between"
         alignItems="flex-start"
-        // spacing={2}
+        spacing={2}
       >
         <Grid item xs={2}>
           <FormControl variant="standard" className={classes.formControl}>
