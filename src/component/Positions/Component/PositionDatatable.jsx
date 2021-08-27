@@ -12,7 +12,7 @@ const data = [
   {
     id: 1,
     Symbol: "AAPL",
-    chargePer: "1982",
+    ChangePer: "1982",
     last: "134.45",
     prevClose: "145.6",
     quantity: "143",
@@ -24,7 +24,7 @@ const data = [
   {
     id: 2,
     Symbol: "AAPL",
-    chargePer: "1982",
+    ChangePer: "1982",
     last: "134.45",
     prevClose: "145.6",
     quantity: "143",
@@ -36,7 +36,7 @@ const data = [
   {
     id: 3,
     Symbol: "AAPL",
-    chargePer: "1982",
+    ChangePer: "1982",
     last: "134.45",
     prevClose: "145.6",
     quantity: "143",
@@ -48,7 +48,7 @@ const data = [
   {
     id: 4,
     Symbol: "AAPL",
-    chargePer: "1982",
+    ChangePer: "1982",
     last: "134.45",
     prevClose: "145.6",
     quantity: "143",
@@ -60,7 +60,7 @@ const data = [
   {
     id: 5,
     Symbol: "AAPL",
-    chargePer: "1982",
+    ChangePer: "1982",
     last: "134.45",
     prevClose: "145.6",
     quantity: "143",
@@ -72,7 +72,7 @@ const data = [
   {
     id: 6,
     Symbol: "AAPL",
-    chargePer: "1982",
+    ChangePer: "1982",
     last: "134.45",
     prevClose: "145.6",
     quantity: "143",
@@ -84,7 +84,7 @@ const data = [
   {
     id: 7,
     Symbol: "AAPL",
-    chargePer: "1982",
+    ChangePer: "1982",
     last: "134.45",
     prevClose: "145.6",
     quantity: "143",
@@ -96,7 +96,7 @@ const data = [
   {
     id: 8,
     Symbol: "AAPL",
-    chargePer: "1982",
+    ChangePer: "1982",
     last: "134.45",
     prevClose: "145.6",
     quantity: "143",
@@ -113,8 +113,8 @@ const columns = [
     sortable: true,
   },
   {
-    name: "Charge %",
-    selector: "chargePer",
+    name: "Change %",
+    selector: "ChangePer",
     sortable: true,
   },
   {

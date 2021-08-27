@@ -6,14 +6,16 @@ import CloseIcon from "@material-ui/icons/Close";
 import { Grid, Button } from "@material-ui/core";
 import TradeTicketForm from "./TradeTicketForm";
 import TradeTicketDatatable from "./TradeTicketDatatable";
+import PlaceNewOrder from "./../../OpenChain/Component/PlaceNewOrder";
 
 function TradeTickets(props) {
   const [state, setState] = useState({
-    stockSymbol: null,
+    stockSymbol: { title: "", symbol: "" },
     selectStrategy: "",
     orderType: "",
     comment: "",
     selectDuration: "",
+    limitPrice: "",
     extendedHour: "",
     exchange: "",
     placementCondition: false,
@@ -23,23 +25,6 @@ function TradeTickets(props) {
     condition: "",
     threshold: "",
   });
-
-  function handleChange(event) {
-    const { name, value } = event.target;
-    setState({ ...state, [name]: value });
-  }
-
-  function handleOnCheck(event) {
-    const { name, checked } = event.target;
-    setState({ ...state, [name]: checked });
-  }
-
-  function handleChangeAutoComplete({ name, value }) {
-    setState({
-      ...state,
-      [name]: value,
-    });
-  }
 
   return (
     <React.Fragment>
@@ -52,57 +37,8 @@ function TradeTickets(props) {
             <CheckBoxOutlineBlankIcon />
             <CloseIcon />
           </div>
+          <PlaceNewOrder popUpData={state} />
         </div>
-        <Grid
-          container
-          direction="row"
-          justifyContent="flex-start"
-          alignItems="flex-start"
-        >
-          <Grid item xs={12}>
-            <div className="widget-body">
-              <div className="trade-ticket-form">
-                <TradeTicketForm
-                  handleChange={handleChange}
-                  handleChangeAutoComplete={handleChangeAutoComplete}
-                  state={state}
-                  handleOnCheck={handleOnCheck}
-                />
-                <Grid
-                  container
-                  direction="row"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <Grid item xs={12}>
-                    <Button variant="contained" color="primary">
-                      Buy
-                    </Button>
-                    <Button variant="contained" color="primary">
-                      Sell
-                    </Button>
-                    <Button variant="contained" color="primary">
-                      Sell Short
-                    </Button>
-                    <Button variant="contained" color="primary">
-                      Buy To Cover
-                    </Button>
-                  </Grid>
-                </Grid>
-              </div>
-              <Grid
-                container
-                direction="row"
-                justifyContent="flex-start"
-                alignItems="flex-start"
-              >
-                <Grid item xs={12}>
-                  <TradeTicketDatatable />
-                </Grid>
-              </Grid>
-            </div>
-          </Grid>
-        </Grid>
       </div>
     </React.Fragment>
   );

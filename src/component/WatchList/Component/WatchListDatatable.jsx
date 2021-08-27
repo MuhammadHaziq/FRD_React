@@ -172,6 +172,7 @@ function PositionDatatable(props) {
   const [watchLists, setWatchLists] = useState(watchList);
   const [openModel, setOpenModel] = useState(false);
   const [modelName, setModelName] = useState("");
+  const [wData, setWData] = useState([]);
 
   function handleChangeAutoComplete({ name, value }) {
     setState({
@@ -185,6 +186,10 @@ function PositionDatatable(props) {
       ...state,
       [name]: value,
     });
+    //-----------------
+    setWData(watchLists.filter((item) => item.value == value)[0].data);
+    console.log(wData);
+    //----------------------
   }
   function open_model(name) {
     setModelName(name);
@@ -192,7 +197,82 @@ function PositionDatatable(props) {
   }
 
   function add_new_watch_list(name) {
-    setWatchLists([{ value: name, label: name, key: "new" }, ...watchLists]);
+    setWatchLists([
+      {
+        value: name,
+        label: name,
+        key: "new",
+        data: [
+          {
+            id: 1,
+            symbol: "AAPL",
+            description: "Apple Inc.",
+            price: "149.2",
+            last: "134.45",
+            bid: "145.6",
+            ask: "143",
+            change: "0.34",
+            changePer: "0.23",
+          },
+          {
+            id: 2,
+            symbol: "AAPL",
+            description: "Apple Inc.",
+            price: "149.2",
+            last: "134.45",
+            bid: "145.6",
+            ask: "143",
+            change: "0.34",
+            changePer: "0.23",
+          },
+          {
+            id: 3,
+            symbol: "AAPL",
+            description: "Apple Inc.",
+            price: "149.2",
+            last: "134.45",
+            bid: "145.6",
+            ask: "143",
+            change: "0.34",
+            changePer: "0.23",
+          },
+          {
+            id: 4,
+            symbol: "AAPL",
+            description: "Apple Inc.",
+            price: "149.2",
+            last: "134.45",
+            bid: "145.6",
+            ask: "143",
+            change: "0.34",
+            changePer: "0.23",
+          },
+          {
+            id: 5,
+            symbol: "AAPL",
+            description: "Apple Inc.",
+            price: "149.2",
+            last: "134.45",
+            bid: "145.6",
+            ask: "143",
+            change: "0.34",
+            changePer: "0.23",
+          },
+          {
+            id: 6,
+            symbol: "AAPL",
+            description: "Apple Inc.",
+            price: "149.2",
+            last: "134.45",
+            bid: "145.6",
+            ask: "143",
+            change: "0.34",
+            changePer: "0.23",
+          },
+        ],
+      },
+      ...watchLists,
+    ]);
     setOpenModel(false);
   }
   function ModelClose() {
@@ -269,7 +349,12 @@ function PositionDatatable(props) {
               </Grid>
             ) : null}
           </Grid>
-          <DataTable columns={columns} data={data} />
+
+          <DataTable
+            columns={columns}
+            data={wData}
+            watchList={state.watchlist}
+          />
         </div>
       </div>
       <WatchListModel

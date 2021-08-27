@@ -111,7 +111,7 @@ function SecurityInfo(props) {
             </FormControl>
           </Grid>
         </Grid>
-        <SecurityLists data={data} />
+        <SecurityLists data={data} stockSymbol={state.stockSymbol} />
         {/* <Grid
           container
           direction="row"

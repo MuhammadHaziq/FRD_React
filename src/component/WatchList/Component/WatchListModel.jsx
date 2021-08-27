@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const WatchListModel = (props) => {
+  console.log(props.watchList, "myvalue");
   const classes = useStyles();
 
   const [state, setState] = useState({

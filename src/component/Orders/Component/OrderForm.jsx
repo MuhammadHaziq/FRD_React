@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AutoCompleteInput from "../../InputComponents/Component/AutoCompleteInput";
 import SelectInput from "../../InputComponents/Component/SelectInput";
 import DateInput from "../../InputComponents/Component/DateInput";
-import { Grid, FormControl } from "@material-ui/core";
+import { Grid, FormControl, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { orderStatuses, orderTypes } from "../../../Constants/Constants";
 const useStyles = makeStyles((theme) => ({
@@ -90,6 +90,13 @@ const OrderForm = (props) => {
             name="toDate"
             variant="standard"
           />
+        </FormControl>
+      </Grid>
+      <Grid item xs={1}>
+        <FormControl variant="standard" className={classes.formControl}>
+          <Button size="small" style={{ backgroundColor: "#4DA0DB" }}>
+            reset
+          </Button>
         </FormControl>
       </Grid>
     </React.Fragment>

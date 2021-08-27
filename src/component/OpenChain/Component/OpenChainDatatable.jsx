@@ -5,6 +5,10 @@ import PresentToAllIcon from "@material-ui/icons/PresentToAll";
 import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 import CloseIcon from "@material-ui/icons/Close";
 import OpenChainForm from "./OpenChainForm";
+import CallsPutsTable from "./CallsPutsTable";
+const ExpandedComponent = ({ data }) => (
+  <pre>{JSON.stringify(data, null, 2)}</pre>
+);
 
 const data = [
   {
@@ -116,6 +120,15 @@ const columns = [
     selector: "bid",
     sortable: true,
     right: true,
+    cell: (row) => (
+      <a
+        onClick={() => {
+          console.log("spdjkapsdjpajs");
+        }}
+      >
+        {row.bid}
+      </a>
+    ),
   },
   {
     name: "Ask",
@@ -158,7 +171,8 @@ const OpenChainDatatable = (props) => {
           </div>
           <div className="widget-body">
             <OpenChainForm />
-            <DataTable columns={columns} data={data} />
+
+            <CallsPutsTable />
           </div>
         </div>
       )}
